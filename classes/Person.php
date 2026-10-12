@@ -9,4 +9,8 @@ class Person
         $this->firstname = $firstname;
         $this->lastname = $lastname;
     }
+
+    public function getFirstname(): string {
+        return $this->firstname;
+    }
 }
