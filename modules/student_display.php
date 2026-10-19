@@ -9,23 +9,20 @@
                     <thead class="table-dark">
                         <tr>
                             <th>Student Number</th>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
+                            <th>Complete Name</th>
                             <th>Date of Birth</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <?php foreach(StudentRepository::all() as $student) : ?>
                     <tr>
-                        <td><?php echo $student['student_number']?></td>
-                        <td><?php echo $student['firstname']?></td>
-                        <td><?php echo $student['lastname']?></td>
-                        <td><?php echo $student['date_of_birth']?></td>
+                        <td><?php echo $student->getIdNumber(); ?></td>
+                        <td><?php echo $student->completeName(); ?></td>
+                        <td><?php echo $student->dateOfBirth(); ?></td>
                         <td>
                             <button class="btn btn-info">Edit</button>
                             <button class="btn btn-danger">Delete</button>
                         </td>
-
                     </tr>
                     <?php endforeach;?>
                 </table>

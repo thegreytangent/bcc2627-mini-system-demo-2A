@@ -11,4 +11,13 @@ class Student extends Person
         $this->dob = $dob;
         parent::__construct($firstname, $lastname);
     }
+
+    public function getIdNumber(): string
+    {
+        return $this->id_number;
+    }
+    public function dateOfBirth(): string
+    {
+        return  date('F d Y', strtotime($this->dob)); ;
+    }
 }

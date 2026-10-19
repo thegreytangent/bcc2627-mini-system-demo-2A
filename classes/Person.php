@@ -10,7 +10,7 @@ class Person
         $this->lastname = $lastname;
     }
 
-    public function getFirstname(): string {
-        return $this->firstname;
+    public function completeName(): string {
+        return $this->lastname .", ". $this->firstname;
     }
 }
