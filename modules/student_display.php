@@ -3,26 +3,31 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                 <button class="btn btn-success">Add  Student</button>
-                <table class="table table-bordered">
+                <button class="btn btn-success mb-4 ">Add Student</button>
+      
+                <table class="table table-bordered table-responsive text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Student Number</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Date of Birth</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <?php foreach(StudentRepository::all() as $student) : ?>
                     <tr>
-                        <th>Student Number</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Date of Birth</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>adfadf</td>
-                         <td>adfadf</td>
-                       <td></td>
-                       <td></td>
-                       <td>
-                        <button class="btn btn-info">Edit</button>
-                        <button class="btn btn-danger">Delete</button>
-                       </td>
+                        <td><?php echo $student['student_number']?></td>
+                        <td><?php echo $student['firstname']?></td>
+                        <td><?php echo $student['lastname']?></td>
+                        <td><?php echo $student['date_of_birth']?></td>
+                        <td>
+                            <button class="btn btn-info">Edit</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
 
                     </tr>
+                    <?php endforeach;?>
                 </table>
             </div>
         </div>
