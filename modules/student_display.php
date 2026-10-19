@@ -1,24 +1,35 @@
 <main class="content">
     <h2>Student Information</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                 <button class="btn btn-success">Add  Student</button>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Student Number</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Date of Birth</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>adfadf</td>
+                         <td>adfadf</td>
+                       <td></td>
+                       <td></td>
+                       <td>
+                        <button class="btn btn-info">Edit</button>
+                        <button class="btn btn-danger">Delete</button>
+                       </td>
 
-    <br> <br> <br>
-<?php $student = new Student('99999', 'Jonathan','Dela Cruz', '1922-2-23'); ?>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 
-    <table border="1">
-        <tr>
-            <td>Student Number</td>
-            <td>Firstname</td>
-            <td>Lastname</td>
-            <td>Date of Birth</td>
-        </tr>
-        <tr>
-            <td><?php echo $student->id_number; ?></td>
-             <td><?php echo $student->getFirstname() ; ?></td>
-            <td>Dela Cruz</td>
-            <td>January 1, 2025</td>
 
-        </tr>
-    </table>
+
 
 
 

@@ -8,7 +8,12 @@
     <div class="layout">
         <?php include 'components/sidebar.php'; ?>
 
-        <?php Page::display($_GET['page']); ?>
+        <?php  
+        
+        Page::display($_GET['page'] ?? "dashbooard"); 
+        
+        
+        ?>
         
     </div>
 </body>
