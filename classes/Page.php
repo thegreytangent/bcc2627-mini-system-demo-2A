@@ -10,6 +10,9 @@ class Page
             case 'grades':
                 include 'modules/grades_display.php';
                 break;
+             case 'student-add':
+                include 'modules/student_add.php';
+                break;
             default:
                 include 'modules/dashboard.php';
         }

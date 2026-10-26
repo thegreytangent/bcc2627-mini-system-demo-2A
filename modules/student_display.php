@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <button class="btn btn-success mb-4 ">Add Student</button>
+                <a href="?page=student-add" class="btn btn-success mb-4 ">Add Student</a>
       
                 <table class="table table-bordered table-responsive text-center">
                     <thead class="table-dark">
