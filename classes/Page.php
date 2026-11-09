@@ -13,6 +13,9 @@ class Page
              case 'student-add':
                 include 'modules/student_add.php';
                 break;
+            case 'student-edit':
+                include 'modules/student_edit.php';
+                break;
             default:
                 include 'modules/dashboard.php';
         }

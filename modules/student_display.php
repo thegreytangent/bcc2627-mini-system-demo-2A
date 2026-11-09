@@ -20,7 +20,9 @@
                         <td><?php echo $student->completeName(); ?></td>
                         <td><?php echo $student->dateOfBirth(); ?></td>
                         <td>
-                            <button class="btn btn-info">Edit</button>
+                            <button class="btn btn-info">
+                            <a href="?page=student-edit&id=<?php echo $student->getId(); ?>" class="text-white text-decoration-none">Edit</a>
+                            </button>
                             <button class="btn btn-danger" onclick="deleteData('<?php echo $student->getId(); ?>')">Delete</button>
                         </td>
                     </tr>

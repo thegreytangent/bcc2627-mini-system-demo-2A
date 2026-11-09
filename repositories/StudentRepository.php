@@ -31,12 +31,16 @@ class StudentRepository extends DBRepository implements IStudentRepository
 
     public static function find(string $id): array
     {
-        return [];
+        $query= self::query("SELECT * FROM student WHERE id = $id");
+        return !$query ? null : array_shift($query);
     }
 
-    public static function update(array $data): array
+    public static function update(array $data, int $id) : void
     {
-        return [];
+        $sql = "UPDATE student SET student_number = '".$data['student_number']."', ";
+        $sql .="firstname = '".$data['firstname']."', lastname = '".$data['lastname']."', ";
+        $sql .=" dob = '".$data['dob']."' WHERE id = $id";
+        self::connection()->query($sql);
     }
 
     public static function delete(string $id): void {
