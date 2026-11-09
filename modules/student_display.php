@@ -21,7 +21,7 @@
                         <td><?php echo $student->dateOfBirth(); ?></td>
                         <td>
                             <button class="btn btn-info">Edit</button>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger" onclick="deleteData('<?php echo $student->getId(); ?>')">Delete</button>
                         </td>
                     </tr>
                     <?php endforeach;?>
@@ -29,10 +29,16 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 </main>
+
+<script>
+function deleteData(id) {
+if (confirm('do you want to delete the data?')) {
+    window.location  = "modules/student_delete.php?id=" + id;
+} else {
+ alert("data cannot be deleted");
+}
+
+;
+}
+</script>

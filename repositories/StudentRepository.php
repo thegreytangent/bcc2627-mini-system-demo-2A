@@ -5,6 +5,7 @@ class StudentRepository extends DBRepository implements IStudentRepository
 
     public static function all(): array
     { 
+      
          $query= self::query("SELECT * FROM student");
        
         $result = [];
@@ -14,6 +15,7 @@ class StudentRepository extends DBRepository implements IStudentRepository
             $s['firstname'], 
             $s['lastname'], 
            $s['dob'], 
+           $s['id']
            );
 
         }
@@ -37,5 +39,8 @@ class StudentRepository extends DBRepository implements IStudentRepository
         return [];
     }
 
-    public static function delete(string $id): void {}
+    public static function delete(string $id): void {
+        $sql = "DELETE FROM student WHERE id = $id";
+         self::connection()->query($sql);
+    }
 }
